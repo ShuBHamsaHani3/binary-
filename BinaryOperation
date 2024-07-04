@@ -1,0 +1,35 @@
+package Arrays;
+
+import java.util.Scanner;
+
+public class binaryOperation {
+    int num,n;
+    binaryOperation(int number , int position)
+    {
+        num = number;
+        n = position;
+    }
+    public void check()
+    {
+        if ((num & (1 << n)) != 0)
+        {
+            System.out.println("nth bit is 1");
+        }
+        else{
+            System.out.println("nth bit is 0");
+        }
+    }
+
+}
+class bit{
+    public static void main(String[] args )
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value Number");
+        int number = sc.nextInt();
+        System.out.println("Enter The Position");
+        int position = sc.nextInt();
+        binaryOperation obj = new binaryOperation(number,position);
+        obj.check();
+    }
+}
